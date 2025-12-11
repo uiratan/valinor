@@ -8,14 +8,22 @@ set -e
 # Aqui apenas imprime instrução de retry. trap garante feedback útil ao usuário em caso de falha.
 trap 'echo "Valinor installation failed! You can retry by running: source ~/.local/share/valinor/install.sh"' ERR
 
+print_msg "INICIANDO: install.sh" 
+
 # Check the distribution name and version and abort if incompatible
 source ~/.local/share/valinor/install/check-version.sh
 
 # Ask for app choices
 echo "Get ready to make a few choices..."
+
+print_msg "INSTALANDO: app-gum.sh"
 #source ~/.local/share/valinor/install/terminal/required/app-gum.sh >/dev/null
-#source ~/.local/share/valinor/install/first-run-choices.sh
-#source ~/.local/share/valinor/install/identification.sh
+
+print_msg "INSTALANDO: VALINOR_FIRST_RUN_OPTIONAL_APPS VALINOR_FIRST_RUN_LANGUAGES VALINOR_FIRST_RUN_DBS"
+source ~/.local/share/valinor/install/first-run-choices.sh
+
+print_msg "CONFIGURANDO: VALINOR_USER_NAME VALINOR_USER_EMAIL"
+source ~/.local/share/valinor/install/identification.sh
 
 # Desktop software and tweaks will only be installed if we're running Gnome
 if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
@@ -38,3 +46,5 @@ else
   echo "Only installing terminal tools..."
 #  source ~/.local/share/valinor/install/terminal.sh
 fi
+
+print_msg "FIM: install.sh" 

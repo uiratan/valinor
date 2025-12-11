@@ -1,5 +1,7 @@
 #!/bin/bash
 
+print_msg "INICIANDO: check-version.sh"
+
 # código que roda QUANDO o arquivo NÃO EXISTE
 if [ ! -f /etc/os-release ]; then
   # aplica cor vermelha ao texto
@@ -12,7 +14,6 @@ fi
 # carregar dados do sistema operacional
 # Com . (source), essas variáveis passam a existir no shell
 . /etc/os-release
-echo "You are currently running: $PRETTY_NAME $VERSION_CODENAME ($ID_LIKE) on $ARCH"
 
 # Check if running on x86
 ARCH=$(uname -m)
@@ -23,3 +24,7 @@ if [ "$ARCH" != "x86_64" ] && [ "$ARCH" != "i686" ]; then
   echo "Installation stopped."
   exit 1
 fi
+
+echo "You are currently running: $PRETTY_NAME $VERSION_CODENAME ($ID_LIKE) on $ARCH platform"
+
+print_msg "FIM: check-version.sh"
