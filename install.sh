@@ -9,7 +9,7 @@ set -e
 trap 'echo "Valinor installation failed! You can retry by running: source ~/.local/share/valinor/install.sh"' ERR
 
 # Check the distribution name and version and abort if incompatible
-#source ~/.local/share/valinor/install/check-version.sh
+source ~/.local/share/valinor/install/check-version.sh
 
 # Ask for app choices
 echo "Get ready to make a few choices..."

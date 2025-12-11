@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 ascii_art='
  █████   █████           ████   ███                               
 ░░███   ░░███           ░░███  ░░░                                
@@ -14,18 +12,25 @@ ascii_art='
      
 '
 
-echo -e "$ascii_art"
-echo "=> Valinor is for fresh Ubuntu 24.04+ installations only!"
-echo -e "\nBegin installation (or abort with ctrl+c)..."
+# Define the color gradient (shades of cyan and blue)
+eu quero mudar essa paleta para iniciando com branco, passando por prateado ate dourado
+colors=(
+    '\033[38;5;172m' # Ouro profundo
+    '\033[38;5;178m' # Ouro
+    '\033[38;5;184m' # Ouro claro/amarelado
+    '\033[38;5;220m' # Dourado claro
+    '\033[38;5;247m' # Prata médio
+    '\033[38;5;250m' # Prata claro
+    '\033[38;5;254m' # Cinza quase branco
+    '\033[38;5;231m' # Branco
+)
 
-echo "apt-get update..."
-#sudo apt-get update >/dev/null
-echo "Installing git..."
-#sudo apt-get install -y git >/dev/null
 
-echo "Cloning Valinor..."
-rm -rf ~/.local/share/valinor
-git clone https://github.com/uiratan/valinor.git ~/.local/share/valinor >/dev/null
+# Split the ASCII art into lines
+IFS=$'\n' read -rd '' -a lines <<<"$ascii_art"
 
-echo "Installation starting..."
-source ~/.local/share/valinor/install.sh
+# Print each line with the corresponding color
+for i in "${!lines[@]}"; do
+	color_index=$((i % ${#colors[@]}))
+	echo -e "${colors[color_index]}${lines[i]}"
+done
