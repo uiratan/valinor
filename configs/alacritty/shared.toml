@@ -5,9 +5,10 @@ TERM = "xterm-256color"
 program = "zellij"
 
 [window]
+dimensions = { columns = 140, lines = 45 }
 padding.x = 16
 padding.y = 14
-decorations = "None"
+#decorations = "None"
 opacity = 0.98
 
 [keyboard]
