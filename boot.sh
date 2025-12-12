@@ -31,10 +31,10 @@ ascii_art='
   ░░░█████░    ███░░███  ░███  ░███  ░███ ░███ ░███ ░███ ░███     
     ░░███     ░░████████ █████ █████ ████ █████░░██████  █████    
      ░░░       ░░░░░░░░ ░░░░░ ░░░░░ ░░░░ ░░░░░  ░░░░░░  ░░░░░      
-     
+
 '
 
-echo -e "$ascii_art"
+echo -e "${GREEN}$ascii_art${RESET}     "
 echo "=> Valinor is for fresh Ubuntu 24.04+ installations only!"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 

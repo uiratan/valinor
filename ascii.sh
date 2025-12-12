@@ -13,7 +13,6 @@ ascii_art='
 '
 
 # Define the color gradient (shades of cyan and blue)
-eu quero mudar essa paleta para iniciando com branco, passando por prateado ate dourado
 colors=(
     '\033[38;5;172m' # Ouro profundo
     '\033[38;5;178m' # Ouro
