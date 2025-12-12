@@ -1,10 +1,6 @@
 # Valinor
 
-<<<<<<< HEAD
 Provisionamento completo para transformar uma instalação nova baseada em Ubuntu 24.04+ (ex: Zorin Os) em um ambiente de desenvolvimento e desktop funcional. Valinor automatiza a instalação de ferramentas de terminal, aplicativos de desktop, ajustes de GNOME e dotfiles, reproduzindo um setup opinativo inspirado no [Omakub](https://omakub.org/).
-=======
-Provisionamento completo para transformar uma instalação nova baseada em Ubuntu 24.04+ (ex: Zorin Os) em um ambiente de desenvolvimento e desktop funcional. Valinor automatiza a instalação de ferramentas de terminal, aplicativos de desktop, ajustes de GNOME e dotfiles, reproduzindo um setup opinativo inspirado no [Omakub](https://valinor.org/).
->>>>>>> 50ffd92 (md files)
 
 ## Principais recursos
 - **Instalação guiada por terminal**: prompts interativos via [Gum](https://github.com/charmbracelet/gum) para escolher apps opcionais, linguagens e bancos de dados.
