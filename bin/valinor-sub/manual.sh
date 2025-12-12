@@ -1,4 +1,4 @@
 #!/bin/bash
 
-source $VALINOR_PATH/bin/valinor-sub/header.sh
+xdg-open "https://manual.valinor.org" &>/dev/null
 source $VALINOR_PATH/bin/valinor-sub/menu.sh

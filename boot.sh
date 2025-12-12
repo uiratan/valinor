@@ -23,14 +23,14 @@ print_msg() {
 print_msg "INICIANDO: boot.sh"
 
 ascii_art='
- █████   █████           ████   ███                               
-░░███   ░░███           ░░███  ░░░                                
- ░███    ░███   ██████   ░███  ████  ████████    ██████  ████████ 
+ █████   █████           ████   ███
+░░███   ░░███           ░░███  ░░░
+ ░███    ░███   ██████   ░███  ████  ████████    ██████  ████████
  ░███    ░███  ░░░░░███  ░███ ░░███ ░░███░░███  ███░░███░░███░░███
- ░░███   ███    ███████  ░███  ░███  ░███ ░███ ░███ ░███ ░███ ░░░ 
-  ░░░█████░    ███░░███  ░███  ░███  ░███ ░███ ░███ ░███ ░███     
-    ░░███     ░░████████ █████ █████ ████ █████░░██████  █████    
-     ░░░       ░░░░░░░░ ░░░░░ ░░░░░ ░░░░ ░░░░░  ░░░░░░  ░░░░░      
+ ░░███   ███    ███████  ░███  ░███  ░███ ░███ ░███ ░███ ░███ ░░░
+  ░░░█████░    ███░░███  ░███  ░███  ░███ ░███ ░███ ░███ ░███
+    ░░███     ░░████████ █████ █████ ████ █████░░██████  █████
+     ░░░       ░░░░░░░░ ░░░░░ ░░░░░ ░░░░ ░░░░░  ░░░░░░  ░░░░░
 
 '
 
@@ -45,7 +45,7 @@ sudo apt-get install -y git >/dev/null
 
 print_msg "Cloning Valinor..."
 rm -rf ~/.local/share/valinor
-rsync -av --exclude='.git' --exclude='ascii.sh' /home/uira/git/linux/valinor/ ~/.local/share/valinor
+rsync -av --exclude='.git' /home/uira/git/linux/valinor/ ~/.local/share/valinor
 #git clone https://github.com/uiratan/valinor.git ~/.local/share/valinor >/dev/null
 
 print_msg "Installation starting..."
