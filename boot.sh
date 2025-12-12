@@ -44,7 +44,7 @@ echo "Installing git..."
 #sudo apt-get install -y git >/dev/null
 
 echo "Cloning Valinor..."
-rm -rf ~/.local/share/valinor
+#rm -rf ~/.local/share/valinor
 rsync -av --exclude='.git' --exclude='ascii.sh' /home/uira/git/linux/valinor/ ~/.local/share/valinor
 #git clone https://github.com/uiratan/valinor.git ~/.local/share/valinor >/dev/null
 

@@ -31,20 +31,21 @@ if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
   gsettings set org.gnome.desktop.screensaver lock-enabled false
   gsettings set org.gnome.desktop.session idle-delay 0
 
-  echo "Installing terminal and desktop tools..."
-
+  echo "Installing terminal tools..."
   # Install terminal tools
-#  source ~/.local/share/valinor/install/terminal.sh
+  # percorre todos os arquivos em ~/.local/share/valinor/install/terminal/*.sh
+  source ~/.local/share/valinor/install/terminal.sh
 
+  echo "Installing desktop tools and tweaks..."
   # Install desktop tools and tweaks
-#  source ~/.local/share/valinor/install/desktop.sh
+  source ~/.local/share/valinor/install/desktop.sh
 
   # Revert to normal idle and lock settings
   gsettings set org.gnome.desktop.screensaver lock-enabled true
   gsettings set org.gnome.desktop.session idle-delay 300
 else
   echo "Only installing terminal tools..."
-#  source ~/.local/share/valinor/install/terminal.sh
+  source ~/.local/share/valinor/install/terminal.sh
 fi
 
 print_msg "FIM: install.sh" 

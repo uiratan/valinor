@@ -4,8 +4,9 @@
 if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
   OPTIONAL_APPS=("1password" "Spotify" "Zoom" "Dropbox")
   #DEFAULT_OPTIONAL_APPS='1password,Spotify,Zoom'
-  DEFAULT_OPTIONAL_APPS='Dropbox'
-  export VALINOR_FIRST_RUN_OPTIONAL_APPS=$(gum choose "${OPTIONAL_APPS[@]}" --no-limit --selected $DEFAULT_OPTIONAL_APPS --height 7 --header "Select optional apps" | tr ' ' '-')
+  #DEFAULT_OPTIONAL_APPS='Dropbox'
+  #export VALINOR_FIRST_RUN_OPTIONAL_APPS=$(gum choose "${OPTIONAL_APPS[@]}" --no-limit --selected $DEFAULT_OPTIONAL_APPS --height 7 --header "Select optional apps" | tr ' ' '-')
+  export VALINOR_FIRST_RUN_OPTIONAL_APPS=$(gum choose "${OPTIONAL_APPS[@]}" --no-limit --height 7 --header "Select optional apps" | tr ' ' '-')
   echo $VALINOR_FIRST_RUN_OPTIONAL_APPS
 fi
 
@@ -18,6 +19,7 @@ echo $VALINOR_FIRST_RUN_LANGUAGES
 
 AVAILABLE_DBS=("MySQL" "Redis" "PostgreSQL")
 #SELECTED_DBS="MySQL,Redis"
-SELECTED_DBS="PostgreSQL"
-export VALINOR_FIRST_RUN_DBS=$(gum choose "${AVAILABLE_DBS[@]}" --no-limit --selected "$SELECTED_DBS" --height 5 --header "Select databases (runs in Docker)")
+#SELECTED_DBS=" "
+#export VALINOR_FIRST_RUN_DBS=$(gum choose "${AVAILABLE_DBS[@]}" --no-limit --selected "$SELECTED_DBS" --height 5 --header "Select databases (runs in Docker)")
+export VALINOR_FIRST_RUN_DBS=$(gum choose "${AVAILABLE_DBS[@]}" --no-limit --height 5 --header "Select databases (runs in Docker)")
 echo $VALINOR_FIRST_RUN_DBS
