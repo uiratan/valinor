@@ -1,5 +1,7 @@
 #!/bin/bash
 
+print_msg "INSTALANDO: programming languages"
+
 # Install default programming languages
 if [[ -v VALINOR_FIRST_RUN_LANGUAGES ]]; then
   languages=$VALINOR_FIRST_RUN_LANGUAGES

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+print_msg "INSTALANDO: databases"
+
 # Install default databases
 if [[ -v VALINOR_FIRST_RUN_DBS ]]; then
 	dbs=$VALINOR_FIRST_RUN_DBS

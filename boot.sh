@@ -38,17 +38,17 @@ echo -e "$ascii_art"
 echo "=> Valinor is for fresh Ubuntu 24.04+ installations only!"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 
-echo "apt-get update..."
-#sudo apt-get update >/dev/null
-echo "Installing git..."
-#sudo apt-get install -y git >/dev/null
+print_msg "apt-get update..."
+sudo apt-get update >/dev/null
+print_msg "Installing git..."
+sudo apt-get install -y git >/dev/null
 
-echo "Cloning Valinor..."
-#rm -rf ~/.local/share/valinor
+print_msg "Cloning Valinor..."
+rm -rf ~/.local/share/valinor
 rsync -av --exclude='.git' --exclude='ascii.sh' /home/uira/git/linux/valinor/ ~/.local/share/valinor
 #git clone https://github.com/uiratan/valinor.git ~/.local/share/valinor >/dev/null
 
-echo "Installation starting..."
+print_msg "Installation starting..."
 source ~/.local/share/valinor/install.sh
 
 print_msg "FIM: boot.sh"

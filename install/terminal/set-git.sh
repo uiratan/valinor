@@ -1,5 +1,7 @@
 #!/bin/bash
 
+print_msg "CONFIGURANDO: git"
+
 # Set common git aliases
 git config --global alias.co checkout
 git config --global alias.br branch
@@ -15,3 +17,5 @@ fi
 if [[ -n "${VALINOR_USER_EMAIL//[[:space:]]/}" ]]; then
   git config --global user.email "$VALINOR_USER_EMAIL"
 fi
+
+git config --global credential.helper cache
