@@ -1,3 +1,5 @@
+![alt](applications/icons/Valinor.png)
+
 # Valinor
 
 Provisionamento completo para transformar uma instalação nova baseada em Ubuntu 24.04+ (ex: Zorin Os) em um ambiente de desenvolvimento e desktop funcional. Valinor automatiza a instalação de ferramentas de terminal, aplicativos de desktop, ajustes de GNOME e dotfiles, reproduzindo um setup opinativo inspirado no [Omakub](https://omakub.org/).
